@@ -1,0 +1,3 @@
+joint:
+  grpc:
+    port: 9060

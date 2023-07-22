@@ -1,0 +1,19 @@
+syntax = "protoc3"
+
+package grpc.user
+
+option java_package = "per.itachi.java.restful.grpc.joint.grpc.GrpcInitializer"
+
+service UserGrpcResource {
+    rpc getUser(UserRequest) returns (UserResponse) {}
+}
+
+message UserRequest{
+    string username = 1;
+}
+
+message UserResponse{
+    string userid = 1;
+    string birthday = 2;
+    string password = 3;
+}
