@@ -1,0 +1,8 @@
+infra:
+  ftp:
+    # By default, upload files in the order of definitions.
+    - remote-name:
+      remote-host: ~
+      remote-port: ~
+      remote-user: ~
+      remote-path: ~

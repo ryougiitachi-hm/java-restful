@@ -1,0 +1,25 @@
+infra:
+  sftp:
+    # The so-called "remote-host-paths" means remote host with a specific path,
+    # which can be regarded as an endpoint, for either uploading or downloading.
+    remote-host-paths:
+      # what if any downloading requirement?
+      host1:
+        upload-order: 1
+        local-private-key-path: ~
+        # options: username/password, ssh public key, kerberos etc.
+        # For ssh options, "PreferredAuthentications" decides which authentication style.
+        # username/password - password
+        # ssh public key - ssh public key
+        # kerberos - seems none
+        remote-auth-type: ~
+        remote-host: ~
+        remote-port: ~
+        remote-user: ~
+        remote-path: ~
+      host2:
+        upload-order: 2
+        remote-host: ~
+        remote-port: ~
+        remote-user: ~
+        remote-path: ~
