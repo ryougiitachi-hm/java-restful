@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package restful.grpc;
+
+// per.itachi.java.restful.grpc.joint.grpc.generated
+option java_package = "per.itachi.java.restful.grpc.joint.grpc";
+option java_multiple_files = true;
+
+message ExceptionRequest {
+  string id = 1;
+}
+
+message ExceptionResponse {
+  string id = 1;
+}
+
+service ExceptionGrpcService {
+  rpc testException (ExceptionRequest) returns (stream ExceptionResponse) {}
+}

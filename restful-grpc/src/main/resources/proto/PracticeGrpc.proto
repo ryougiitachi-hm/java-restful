@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package restful.grpc;
+
+option java_multiple_files = true;
+option java_package = "per.itachi.java.restful.grpc.joint.grpc";
+//option java_outer_classname = "PracticeProtobuf";
+
+message PracticeRequest {
+  string idString = 1;
+}
+
+message PracticeResponse {
+  string message = 1;
+}
+
+service PracticeGrpcService {
+
+  rpc exerciseRequestResponse (PracticeRequest) returns ( PracticeResponse) {}
+
+  rpc exerciseStreamRequestResponse (stream PracticeRequest) returns ( PracticeResponse) {}
+
+  rpc exerciseRequestStreamResponse (PracticeRequest) returns (stream PracticeResponse) {}
+
+  rpc exerciseStreamRequestStreamResponse (stream PracticeRequest) returns (stream PracticeResponse) {}
+}

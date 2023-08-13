@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package restful.grpc;
+
+option java_multiple_files = true;
+option java_package = "per.itachi.java.restful.grpc.joint.grpc";
+//option java_outer_classname = "UserProtobuf";
+
+message UserRequest {
+  string userId = 1;
+  string username = 2;
+  sint32 testSint32 = 3;
+  sint64 testSint64 = 4;
+  sfixed32 testSfixed32 = 5;
+  sfixed64 testSfixed64 = 6;
+}
+
+message UserResponse {
+  string userId = 1;
+}
+
+service UserGrpcService {
+
+  rpc getUser (UserRequest) returns ( UserResponse) {}
+
+}
