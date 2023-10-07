@@ -15,6 +15,7 @@
         <module>restful-jaxrs-cxf-springboot</module>
         <module>restful-grpc</module>
         <module>restful-ftp</module>
+        <module>restful-grpc-client</module>
     </modules>
 
     <properties>
