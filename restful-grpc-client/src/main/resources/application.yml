@@ -1,0 +1,31 @@
+infra:
+  grpc:
+    svc:
+      host: 127.0.0.1
+      port: 9060
+      forward-headers:
+      # Usually case-insensitive
+      - user
+      - jwt
+      - x-forwarded-for
+      - x-real-ip
+      - x-nginx-ip
+      # envisage, multiple alternative grpc client invocation, Comparable
+      cluster1:
+        order: 1
+        enable: true
+        address: 127.0.0.1:8060
+        addresses: 127.0.0.1:9060
+        host: 127.0.0.1
+        port: 9060
+      cluster2:
+        order: 2
+        enable: true
+        address: 127.0.0.1:8060
+        addresses: 127.0.0.1:9060
+        host: 127.0.0.1
+        port: 9060
+  restful:
+    svc:
+      host: 127.0.0.1
+      port: 8060
